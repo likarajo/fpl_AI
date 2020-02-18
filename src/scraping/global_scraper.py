@@ -9,18 +9,15 @@ import os
 
 
 def parse_data():
-    '''
-    Parse and store all the data
-    '''
-
     print("Getting data")
     data = get_data()
 
     if not os.path.exists('data'):
         os.mkdir('data')
 
-    with open(f'data/gameweeks.json', 'w', encoding='utf-8') as f:
-        json.dump(data['events'], f, ensure_ascii=True, indent=2)
+    f = open('data/gameweeks.json', 'w', encoding='utf-8')
+    json.dump(data['events'], f, ensure_ascii=True, indent=2)
+    f.close()
 
     season = '2019-20'
     base_filename = 'data/' + season + '/'
@@ -72,4 +69,4 @@ if __name__ == "__main__":
     start = time.time()
     main()
     finish = time.time()
-    print(f'Took {round(finish-start, 2)} seconds.')
+    print('Completed in', round(finish-start, 2), 'seconds.')

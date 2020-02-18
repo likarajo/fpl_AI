@@ -1,10 +1,6 @@
-# original author : https://github.com/vaastav
-# source: https://github.com/vaastav/Fantasy-Premier-League
-
 import csv
 import math
 import os
-
 
 def clean_players(filename, base_filename):
     '''

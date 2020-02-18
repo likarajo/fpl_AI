@@ -1,7 +1,7 @@
 # original author : https://github.com/vaastav
 # source: https://github.com/vaastav/Fantasy-Premier-League
 
-from utility import uprint
+#from utility import uprint
 import pandas as pd
 import csv
 import os
@@ -32,7 +32,7 @@ def parse_players(list_of_players, base_filename):
     w.writeheader()
     
     for player in list_of_players:
-            w.writerow({k:str(v).encode('utf-8').decode('utf-8') for k, v in player.items()})
+        w.writerow({k:str(v).encode('utf-8').decode('utf-8') for k, v in player.items()})
 
 
 def parse_player_history(list_of_histories, base_filename, player_name, Id):
@@ -61,8 +61,9 @@ def parse_player_gw_history(list_of_gw, base_filename, player_name, Id):
 
 def parse_gw_entry_history(data, outfile_base):
     print(outfile_base)
-    with open(f'{outfile_base}/my_team.json', 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=True, indent=2)
+    f = open('{outfile_base}/my_team.json', 'w', encoding='utf-8')
+    json.dump(data, f, ensure_ascii=True, indent=2)
+    f.close()
 
 
 def parse_entry_history(data, outfile_base):
