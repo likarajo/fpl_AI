@@ -3,6 +3,7 @@
 Artificial Intelligence guide for preparing [my team](https://fantasy.premierleague.com/entry/5118353/history) for [Fantasy Premier League](https://fantasy.premierleague.com).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/likarajo/fpl_AI/blob/master/LICENSE)
+[![Run AI Bot](https://github.com/likarajo/fpl_AI/workflows/Run%20AI%20Bot/badge.svg)](https://github.com/likarajo/fpl_AI/actions)
 
 ## Fantasy Premier League
 
